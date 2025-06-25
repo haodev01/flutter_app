@@ -49,7 +49,7 @@ class _AnimatedTextFieldState extends State<AnimatedTextField> {
             widget.label,
             style: TextStyle(
               color: _isFocused ? AppColors.labelFocus : AppColors.title2,
-              fontSize: 16,
+              fontSize: 18,
             ),
           ),
           border: InputBorder.none,

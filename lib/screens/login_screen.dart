@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
               AppTextTitle(label: "Đăng nhập tài khoản"),
               AppTextDescription(label: "Vui lòng nhập thông tin để tiếp tục"),
               SizedBox(height: 32),
-              AnimatedTextField(label: "Số điện thoại 2", suffix: null),
+              AnimatedTextField(label: "Số điện thoại", suffix: null),
               SizedBox(height: 16),
               AnimatedTextField(label: "Mật khẩu", suffix: null),
               SizedBox(height: 16),
