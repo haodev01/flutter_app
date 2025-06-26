@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/theme/app_colors.dart';
 
-class AppTextTitle extends StatelessWidget {
+class AppTextSub extends StatelessWidget {
   final String label;
-  final bool textCenter;
 
-  const AppTextTitle({super.key, required this.label, this.textCenter = false});
+  const AppTextSub({super.key, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +12,9 @@ class AppTextTitle extends StatelessWidget {
       label,
       style: TextStyle(
         color: AppColors.title1,
-        fontSize: 28,
-        fontWeight: FontWeight.w700,
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
       ),
-      textAlign: textCenter ? TextAlign.center : TextAlign.left,
     );
   }
 }

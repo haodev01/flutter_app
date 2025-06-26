@@ -17,13 +17,19 @@ class ButtonPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(0),
+
       child: SizedBox(
         width: width ?? double.infinity,
         height: 52,
         child: ElevatedButton(
-          style: ElevatedButton.styleFrom(backgroundColor: AppColors.primary),
-          child: AppTextButton(label: "Đăng nhập"),
-          onPressed: () => {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColors.primary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+          ),
+          child: AppTextButton(label: label),
+          onPressed: onPressed,
         ),
       ),
     );
