@@ -61,7 +61,6 @@ class _SignupScreenState extends State<SignupScreen> {
                   SizedBox(height: 32),
                   AnimatedTextField(
                     label: "Số điện thoại",
-                    suffix: null,
                     controller: phoneController,
                     errorMessage: errorPhone,
                     isKeyboardNumber: true,
@@ -75,7 +74,6 @@ class _SignupScreenState extends State<SignupScreen> {
                   SizedBox(height: 16),
                   AnimatedTextField(
                     label: "Mật khẩu",
-                    suffix: null,
                     controller: passwordController,
                     errorMessage: errorPassword,
                     validator: (value) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/theme/app_colors.dart';
 import 'package:workspace/core/widgets/button/button_primary.dart';
+import 'package:workspace/core/widgets/image/ImageItem.dart';
 import 'package:workspace/core/widgets/text/app_text_sub.dart';
 import 'package:workspace/core/widgets/text/app_text_title.dart';
 
@@ -29,12 +30,7 @@ void showMainDialog({
             mainAxisSize: MainAxisSize.min,
             spacing: 16,
             children: [
-              Image.asset(
-                'assets/images/$imageName',
-                width: 54,
-                height: 54,
-                fit: BoxFit.cover,
-              ),
+              if (imageName != null) ImageItem(name: imageName),
               AppTextTitle(label: title, textCenter: true),
               AppTextSub(label: description),
               ButtonPrimary(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/theme/app_colors.dart';
 import 'package:workspace/core/widgets/button/button_primary.dart';
+import 'package:workspace/core/widgets/common/dialog/main_dialog.dart';
+import 'package:workspace/core/widgets/image/ImageItem.dart';
 import 'package:workspace/core/widgets/input/animated_textfield.dart';
 import 'package:workspace/core/widgets/text/app_text_description.dart';
 import 'package:workspace/core/widgets/text/app_text_title.dart';
@@ -78,7 +80,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 32),
                   AnimatedTextField(
                     label: "Số điện thoại",
-                    suffix: null,
                     controller: phoneController,
                     errorMessage: errorPhone,
                     isKeyboardNumber: true,
@@ -92,9 +93,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 16),
                   AnimatedTextField(
                     label: "Mật khẩu",
-                    suffix: null,
                     controller: passwordController,
                     errorMessage: errorPassword,
+                    isPw: true,
                     validator: (value) {
                       setState(() {
                         errorPassword = value?.validatePassword ?? '';
