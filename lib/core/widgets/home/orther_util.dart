@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/constants/list_constants.dart';
 import 'package:workspace/core/widgets/common/container_title.dart';
-import 'package:workspace/core/widgets/common/image/image_item.dart';
-import 'package:workspace/core/widgets/common/text/app_text_default.dart';
 import 'package:workspace/core/widgets/home/icon_label.dart';
 
 class OrtherUtil extends StatefulWidget {

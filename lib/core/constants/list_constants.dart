@@ -25,3 +25,17 @@ const List<Map<String, dynamic>> ortherUtil = [
   {'label': 'Câu hỏi thường gặp', 'icon': 'icon-help'},
   {'label': 'Liên hệ VietCredit', 'icon': 'icon-support'},
 ];
+
+const List<Map<String, dynamic>> settings = [
+  {'label': 'Đăng nhập bằng sinh trắc học', 'preIcon': 'settings/icon-faceID'},
+  {'label': 'Đổi mật khẩu', 'preIcon': 'settings/icon-lock'},
+  {'label': 'Cài đặt SmartOTP', 'preIcon': 'settings/icon-smart-otp'},
+  {'label': 'Xóa tài khoản', 'preIcon': 'settings/icon-trash'},
+];
+
+const List<Map<String, dynamic>> supports = [
+  {'label': 'Liên hệ VietCredit', 'preIcon': 'settings/icon-support'},
+  {'label': 'Câu hỏi thường gặp', 'preIcon': 'settings/icon-help'},
+  {'label': 'Biểu mẫu và phí', 'preIcon': 'settings/icon-template-document'},
+  {'label': 'Đăng xuất', 'preIcon': 'settings/icon-sign-out'},
+];

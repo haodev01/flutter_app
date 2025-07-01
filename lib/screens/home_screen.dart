@@ -8,6 +8,7 @@ import 'package:workspace/core/widgets/home/orther_util.dart';
 import 'package:workspace/core/widgets/home/payment_info.dart';
 import 'package:workspace/core/widgets/home/user_info.dart';
 import 'package:workspace/core/widgets/layout/layout_bottom_bar.dart';
+import 'package:workspace/screens/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return LayoutBottomBar(
       items: [
         NavModel(page: HomePage(), navKey: GlobalKey<NavigatorState>()),
-        NavModel(page: Text('Profile'), navKey: GlobalKey<NavigatorState>()),
+        NavModel(page: ProfileScreen(), navKey: GlobalKey<NavigatorState>()),
       ],
     );
   }
