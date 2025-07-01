@@ -19,3 +19,9 @@ const List<Map<String, dynamic>> favorites = [
   {'label': 'Mở thẻ tín dụng', 'icon': 'favorites/icon-new-card'},
   {'label': 'Tất cả chức năng', 'icon': 'favorites/icon-category'},
 ];
+
+const List<Map<String, dynamic>> ortherUtil = [
+  {'label': 'Biểu mẫu biểu phí', 'icon': 'icon-template-document'},
+  {'label': 'Câu hỏi thường gặp', 'icon': 'icon-help'},
+  {'label': 'Liên hệ VietCredit', 'icon': 'icon-support'},
+];

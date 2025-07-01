@@ -3,6 +3,7 @@ import 'package:workspace/core/theme/app_colors.dart';
 import 'package:workspace/core/widgets/common/image/image_item.dart';
 import 'package:workspace/core/widgets/home/favorite_function.dart';
 import 'package:workspace/core/widgets/home/interested.dart';
+import 'package:workspace/core/widgets/home/orther_util.dart';
 import 'package:workspace/core/widgets/home/payment_info.dart';
 import 'package:workspace/core/widgets/home/user_info.dart';
 
@@ -33,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   PaymentInfo(),
                   FavoriteFunction(),
                   Interested(),
+                  OrtherUtil(),
                 ],
               ),
             ),

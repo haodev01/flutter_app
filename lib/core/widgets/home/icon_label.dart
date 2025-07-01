@@ -17,6 +17,7 @@ class _IconLabelState extends State<IconLabel> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           ImageItem(name: widget.icon, width: 32, height: 32),
           SizedBox(height: 4),
