@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/theme/app_colors.dart';
+import 'package:workspace/core/widgets/common/image/image_item.dart';
+import 'package:workspace/core/widgets/home/favorite_function.dart';
+import 'package:workspace/core/widgets/home/interested.dart';
+import 'package:workspace/core/widgets/home/payment_info.dart';
+import 'package:workspace/core/widgets/home/user_info.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,17 +16,27 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus(); // 👉 bỏ focus tất cả TextField
-      },
-      child: Scaffold(
-        backgroundColor: AppColors.background,
-        body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.only(left: 16, top: 16, right: 16),
-            child: Text('Home screen'),
-          ),
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            ImageItem(
+              name: 'bg-home',
+              width: double.infinity,
+              fit: BoxFit.fitWidth,
+            ),
+            SafeArea(
+              child: Column(
+                children: [
+                  UserInfo(),
+                  PaymentInfo(),
+                  FavoriteFunction(),
+                  Interested(),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

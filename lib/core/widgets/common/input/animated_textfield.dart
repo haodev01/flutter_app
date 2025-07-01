@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/theme/app_colors.dart';
-import 'package:workspace/core/widgets/image/ImageItem.dart';
-import 'package:workspace/core/widgets/text/app_text_error.dart';
+import 'package:workspace/core/widgets/common/image/image_item.dart';
+import 'package:workspace/core/widgets/common/text/app_text_error.dart';
 
 class AnimatedTextField extends StatefulWidget {
   final String label;

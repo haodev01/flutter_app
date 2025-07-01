@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/theme/app_colors.dart';
-import 'package:workspace/core/widgets/button/button_primary.dart';
+import 'package:workspace/core/widgets/common/button/button_primary.dart';
 import 'package:workspace/core/widgets/common/dialog/main_dialog.dart';
-import 'package:workspace/core/widgets/input/animated_textfield.dart';
-import 'package:workspace/core/widgets/text/app_text_description.dart';
-import 'package:workspace/core/widgets/text/app_text_title.dart';
+import 'package:workspace/core/widgets/common/input/animated_textfield.dart';
+import 'package:workspace/core/widgets/common/text/app_text_description.dart';
+import 'package:workspace/core/widgets/common/text/app_text_title.dart';
 import 'package:workspace/extensions/validators.dart';
 import 'package:go_router/go_router.dart';
 

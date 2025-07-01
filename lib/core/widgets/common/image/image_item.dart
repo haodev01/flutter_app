@@ -3,14 +3,17 @@ import 'package:flutter/widgets.dart';
 class ImageItem extends StatelessWidget {
   final String name;
   final String type;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
+  final BoxFit fit;
+
   const ImageItem({
     super.key,
     required this.name,
     this.type = 'png',
-    this.width = 54,
-    this.height = 54,
+    this.width,
+    this.height,
+    this.fit = BoxFit.cover,
   });
 
   @override
@@ -19,8 +22,7 @@ class ImageItem extends StatelessWidget {
       'assets/images/$name.$type',
       width: width,
       height: height,
-
-      fit: BoxFit.cover,
+      fit: fit,
     );
   }
 }
