@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/core/constants/list_constants.dart';
 import 'package:workspace/core/widgets/common/container_title.dart';
+import 'package:workspace/core/widgets/common/image/image_item.dart';
+import 'package:workspace/core/widgets/common/text/app_text_default.dart';
 import 'package:workspace/core/widgets/home/icon_label.dart';
 
 class OrtherUtil extends StatefulWidget {
@@ -22,6 +24,7 @@ class _OrtherUtilState extends State<OrtherUtil> {
           child: GridView.count(
             crossAxisCount: 3,
             shrinkWrap: true,
+            childAspectRatio: 114 / 88,
             children: List.generate(ortherUtil.length, (index) {
               return GestureDetector(
                 onTap: () {},
