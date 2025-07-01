@@ -12,7 +12,7 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(color: AppColors.background),
-      padding: EdgeInsets.only(left: 16, bottom: 16, right: 16),
+      padding: EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 22),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(999),
         child: Container(
