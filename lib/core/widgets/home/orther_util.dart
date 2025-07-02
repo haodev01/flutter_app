@@ -23,11 +23,13 @@ class _OrtherUtilState extends State<OrtherUtil> {
             crossAxisCount: 3,
             shrinkWrap: true,
             childAspectRatio: 114 / 88,
+            physics: NeverScrollableScrollPhysics(),
             children: List.generate(ortherUtil.length, (index) {
               return GestureDetector(
                 onTap: () {},
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: 12),
+                  padding: EdgeInsets.symmetric(horizontal: 8),
                   child: IconLabel(
                     icon: ortherUtil[index]['icon'],
                     label: ortherUtil[index]['label'],

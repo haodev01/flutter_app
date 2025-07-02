@@ -14,21 +14,18 @@ class IconLabel extends StatefulWidget {
 class _IconLabelState extends State<IconLabel> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          ImageItem(name: widget.icon, width: 32, height: 32),
-          SizedBox(height: 4),
-          AppTextDefault(
-            label: widget.label,
-            fontSize: 13,
-            weight: FontWeight.w500,
-            textCenter: true,
-          ),
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        ImageItem(name: widget.icon, width: 32, height: 32),
+        SizedBox(height: 4),
+        AppTextDefault(
+          label: widget.label,
+          fontSize: 13,
+          weight: FontWeight.w500,
+          textCenter: true,
+        ),
+      ],
     );
   }
 }

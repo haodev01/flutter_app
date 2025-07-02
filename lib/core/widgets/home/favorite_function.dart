@@ -36,11 +36,14 @@ class _FavoriteFunctionState extends State<FavoriteFunction> {
           GridView.count(
             crossAxisCount: 4,
             shrinkWrap: true,
+            childAspectRatio: 83 / 88,
+            physics: NeverScrollableScrollPhysics(),
             children: List.generate(favorites.length, (index) {
               return GestureDetector(
                 onTap: () {},
                 child: Container(
                   margin: EdgeInsets.only(top: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 8),
                   child: IconLabel(
                     icon: favorites[index]['icon'],
                     label: favorites[index]['label'],
