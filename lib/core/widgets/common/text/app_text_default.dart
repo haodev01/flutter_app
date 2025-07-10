@@ -7,6 +7,7 @@ class AppTextDefault extends StatelessWidget {
   final FontWeight weight;
   final double fontSize;
   final bool textCenter;
+  final bool textRight;
 
   const AppTextDefault({
     super.key,
@@ -15,6 +16,7 @@ class AppTextDefault extends StatelessWidget {
     this.weight = FontWeight.w400,
     this.fontSize = 16,
     this.textCenter = false,
+    this.textRight = false,
   });
 
   @override
@@ -22,7 +24,11 @@ class AppTextDefault extends StatelessWidget {
     return Text(
       label,
       style: TextStyle(color: color, fontSize: fontSize, fontWeight: weight),
-      textAlign: textCenter ? TextAlign.center : TextAlign.left,
+      textAlign: textCenter
+          ? TextAlign.center
+          : textRight
+          ? TextAlign.right
+          : TextAlign.left,
     );
   }
 }

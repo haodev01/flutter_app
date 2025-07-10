@@ -3,6 +3,7 @@ import 'package:workspace/core/widgets/common/bottom-bar/nav_bar.dart';
 import 'package:workspace/core/widgets/common/bottom-bar/nav_model.dart';
 import 'package:workspace/core/widgets/common/image/image_item.dart';
 import 'package:workspace/core/theme/app_colors.dart';
+import 'package:workspace/core/widgets/common/popup/quick_access_popup.dart';
 
 class LayoutBottomBar extends StatefulWidget {
   final List<NavModel> items;
@@ -54,7 +55,9 @@ class _LayoutBottomBarState extends State<LayoutBottomBar> {
                 child: FloatingActionButton(
                   backgroundColor: AppColors.primary,
                   elevation: 0,
-                  onPressed: () => {},
+                  onPressed: () {
+                    showQuickAccessPopup(context, 'Truy cập nhanh');
+                  },
                   shape: RoundedRectangleBorder(
                     side: const BorderSide(width: 3, color: AppColors.white),
                     borderRadius: BorderRadius.circular(100),

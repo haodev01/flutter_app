@@ -39,3 +39,27 @@ const List<Map<String, dynamic>> supports = [
   {'label': 'Biểu mẫu và phí', 'preIcon': 'settings/icon-template-document'},
   {'label': 'Đăng xuất', 'preIcon': 'settings/icon-sign-out'},
 ];
+
+const List<Map<String, dynamic>> quickAccess = [
+  {'label': 'Thông tin chi tiết thẻ', 'icon': 'favorites/icon-balance-payment'},
+  {'label': 'Lịch sử giao dịch', 'icon': 'favorites/icon-trans-history'},
+  {'label': 'Xem sao kê', 'icon': 'favorites/icon-card-statement'},
+  {'label': 'Thanh toán dư nợ', 'icon': 'favorites/icon-balance-payment'},
+  {'label': 'Quét mã QR', 'icon': 'favorites/icon-scan-qr'},
+];
+
+const List<Map<String, dynamic>> profileInfo = [
+  {'label': 'Số căn cước', 'value': '123456577'},
+  {'label': 'Ngày sinh', 'value': '11/08/1992'},
+  {'label': 'Giới tính', 'value': 'Nam'},
+];
+
+const List<Map<String, dynamic>> profileContact = [
+  {'label': 'Email', 'value': 'harrytran1108@gmail.com'},
+  {'label': 'Số điện thoại', 'value': '123456789', "edit": 'true'},
+  {
+    'label': 'Địa chỉ',
+    'value': '123 An Khánh, Hoài Đức, Hà Nội',
+    "edit": 'true',
+  },
+];

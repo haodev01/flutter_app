@@ -6,6 +6,7 @@ import 'package:workspace/core/widgets/common/container_title.dart';
 import 'package:workspace/core/widgets/common/image/image_item.dart';
 import 'package:workspace/core/widgets/common/item/section_item.dart';
 import 'package:workspace/core/widgets/profile/user_info.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -54,6 +55,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               label: 'Thông tin tài khoản',
                               sufIcon: 'icon-arrow-right-dis',
                               preIcon: 'icon-profile',
+                              onPressed: () {
+                                GoRouter.of(context).push('/profile-info');
+                              },
                             ),
                           ),
                         ),
