@@ -29,6 +29,7 @@ class _LayoutBottomBarState extends State<LayoutBottomBar> {
         }
       },
       child: Scaffold(
+        extendBody: true,
         body: IndexedStack(
           index: selectedTab,
           children: widget.items
@@ -48,19 +49,22 @@ class _LayoutBottomBarState extends State<LayoutBottomBar> {
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              ImageItem(name: 'image-topbg', width: 120, height: 30),
               Positioned(
-                top: 10,
-                left: 32,
-                child: FloatingActionButton(
-                  backgroundColor: AppColors.primary,
-                  elevation: 0,
-                  onPressed: () {
-                    showQuickAccessPopup(context, 'Truy cập nhanh');
-                  },
-                  shape: RoundedRectangleBorder(
-                    side: const BorderSide(width: 3, color: AppColors.white),
-                    borderRadius: BorderRadius.circular(100),
+                top: 36,
+                left: -33,
+                child: ImageItem(name: 'image-topbg', width: 120, height: 30),
+              ),
+              GestureDetector(
+                onTap: () {
+                  showQuickAccessPopup(context, 'Truy cập nhanh');
+                },
+                child: Container(
+                  margin: EdgeInsets.only(top: 50),
+                  width: 54,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(999),
                   ),
                   child: Center(
                     child: ImageItem(
@@ -71,6 +75,30 @@ class _LayoutBottomBarState extends State<LayoutBottomBar> {
                   ),
                 ),
               ),
+              // Positioned(
+              //   top: 10,
+              //   left: 32,
+              //   child: GestureDetector(
+              //     onTap: () {
+              //       showQuickAccessPopup(context, 'Truy cập nhanh');
+              //     },
+              //     child: Container(
+              //       width: 54,
+              //       height: 54,
+              //       decoration: BoxDecoration(
+              //         color: AppColors.primary,
+              //         borderRadius: BorderRadius.circular(999),
+              //       ),
+              //       child: Center(
+              //         child: ImageItem(
+              //           name: 'icon-vector',
+              //           width: 22,
+              //           height: 20,
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
