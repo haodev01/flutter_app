@@ -14,11 +14,12 @@ class ContainerTitle extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AppTextDefault(
-              label: "$title",
-              fontSize: 18,
-              weight: FontWeight.w800,
-            ),
+            if (title != null && title!.isNotEmpty)
+              AppTextDefault(
+                label: "$title",
+                fontSize: 18,
+                weight: FontWeight.w800,
+              ),
           ],
         ),
         child,

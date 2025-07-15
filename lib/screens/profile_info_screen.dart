@@ -12,6 +12,7 @@ import 'package:workspace/core/widgets/common/item/info_item.dart';
 import 'package:workspace/core/widgets/common/item/section_item.dart';
 import 'package:workspace/core/widgets/common/text/app_text_default.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfileInfoScreen extends StatefulWidget {
   const ProfileInfoScreen({super.key});
@@ -22,6 +23,22 @@ class ProfileInfoScreen extends StatefulWidget {
 
 class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
   File? imageFile;
+
+  @override
+  void initState() {
+    super.initState();
+    loadAvatar();
+  }
+
+  Future<void> loadAvatar() async {
+    final prefs = await SharedPreferences.getInstance();
+    final avatar = prefs.getString('avatar') ?? '';
+    if (avatar.isNotEmpty) {
+      setState(() {
+        imageFile = File(avatar);
+      });
+    }
+  }
 
   Future<void> pickImage() async {
     final status = await Permission.photos.request();
@@ -34,6 +51,9 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
         setState(() {
           imageFile = File(pickedFile.path);
         });
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.remove('avatar');
+        await prefs.setString('avatar', pickedFile.path);
       }
     } else if (status.isDenied) {
       ScaffoldMessenger.of(

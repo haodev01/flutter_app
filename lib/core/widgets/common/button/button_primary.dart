@@ -17,10 +17,13 @@ class ButtonPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(0),
-
-      child: SizedBox(
+      child: Container(
         width: width ?? double.infinity,
         height: 52,
+        decoration: BoxDecoration(
+          color: AppColors.primary,
+          borderRadius: BorderRadius.circular(16),
+        ),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.primary,
@@ -28,8 +31,8 @@ class ButtonPrimary extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
           ),
-          child: AppTextButton(label: label),
           onPressed: onPressed,
+          child: AppTextButton(label: label),
         ),
       ),
     );

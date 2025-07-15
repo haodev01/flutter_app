@@ -1,4 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:workspace/screens/card_service_screen.dart';
+import 'package:workspace/screens/history_screen.dart';
 import 'package:workspace/screens/home_screen.dart';
 import 'package:workspace/screens/login_screen.dart';
 import 'package:workspace/screens/profile_info_screen.dart';
@@ -25,5 +27,10 @@ final router = GoRouter(
         return WebviewScreen(url: url);
       },
     ),
+    GoRoute(
+      path: '/card-service',
+      builder: (context, state) => CardServiceScreen(),
+    ),
+    GoRoute(path: '/history', builder: (context, state) => HistoryScreen()),
   ],
 );

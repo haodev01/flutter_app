@@ -67,6 +67,7 @@ class _SectionItemState extends State<SectionItem> {
                 scale: 0.7, // nhỏ hơn cả chiều cao và chiều ngang
                 child: CupertinoSwitch(
                   value: isEnabled,
+                  activeTrackColor: AppColors.primary,
                   onChanged: (value) => setState(() => isEnabled = value),
                 ),
               ),

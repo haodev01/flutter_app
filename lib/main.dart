@@ -4,15 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:workspace/core/config/router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp, // chỉ cho dọc xuôi
+  ]);
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.transparent, // ✅ Làm trong suốt
       systemNavigationBarIconBrightness:
           Brightness.dark, // hoặc light nếu icon màu trắng
-      statusBarColor: Colors.transparent, // Nếu muốn status bar cũng trong suốt
+      statusBarColor: Colors.transparent,
     ),
   );
   runApp(const ProviderScope(child: MyApp()));

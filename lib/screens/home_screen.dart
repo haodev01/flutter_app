@@ -32,31 +32,39 @@ class _HomeScreenState extends State<HomeScreen> {
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  Future<void> _reloadData() async {
+    await Future.delayed(Duration(seconds: 1)); // giả lập delay
+    print('reload');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       backgroundColor: AppColors.background,
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            ImageItem(
-              name: 'bg-home',
-              width: double.infinity,
-              fit: BoxFit.fitWidth,
-            ),
-            SafeArea(
-              child: Column(
-                children: [
-                  UserInfo(),
-                  PaymentInfo(),
-                  FavoriteFunction(),
-                  Interested(),
-                  OrtherUtil(),
-                ],
+      body: RefreshIndicator(
+        onRefresh: _reloadData,
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              ImageItem(
+                name: 'bg-home',
+                width: double.infinity,
+                fit: BoxFit.fitWidth,
               ),
-            ),
-          ],
+              SafeArea(
+                child: Column(
+                  children: [
+                    UserInfo(),
+                    PaymentInfo(),
+                    FavoriteFunction(),
+                    Interested(),
+                    OrtherUtil(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

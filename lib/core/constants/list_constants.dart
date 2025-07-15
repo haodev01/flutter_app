@@ -8,9 +8,17 @@ const List<Map<String, dynamic>> tabs = [
 const List<Map<String, dynamic>> favorites = [
   {'label': 'Thanh toán dư nợ', 'icon': 'favorites/icon-balance-payment'},
   {'label': 'Mở/Khóa thẻ', 'icon': 'favorites/icon-lock-card'},
-  {'label': 'Lịch sử giao dịch', 'icon': 'favorites/icon-trans-history'},
+  {
+    'label': 'Lịch sử giao dịch',
+    'icon': 'favorites/icon-trans-history',
+    "route": "/history",
+  },
   {'label': 'Xem sao kê', 'icon': 'favorites/icon-card-statement'},
-  {'label': 'Yêu cầu thẻ vật lý', 'icon': 'favorites/icon-physical-card'},
+  {
+    'label': 'Yêu cầu thẻ vật lý',
+    'icon': 'favorites/icon-physical-card',
+    "route": "/card-service",
+  },
   {'label': 'Kích hoạt thẻ vật lý', 'icon': 'favorites/icon-active-card'},
   {'label': 'Dịch vụ ATM PIN', 'icon': 'favorites/icon-pin-card'},
   {'label': 'Chuyển phát thẻ', 'icon': 'favorites/icon-delivery'},

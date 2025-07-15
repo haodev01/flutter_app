@@ -23,7 +23,12 @@ class AppTextDefault extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       label,
-      style: TextStyle(color: color, fontSize: fontSize, fontWeight: weight),
+      style: TextStyle(
+        color: color,
+        fontSize: fontSize,
+        fontWeight: weight,
+        decoration: TextDecoration.none,
+      ),
       textAlign: textCenter
           ? TextAlign.center
           : textRight
